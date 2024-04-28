@@ -14,7 +14,6 @@ typedef  unsigned long long int ULONG64;
 typedef  long long int LONG64;
 
 LONG64 z1 = 15211;
-
 cout << z1 << endl;
    
 map<string, string> str_vars;
@@ -35,6 +34,8 @@ map<string, double> double_vars;
 map<string, char> char_vars;
 
 
+map<string, string> functions;
+functions["name_1"] = "main";
 
 map<string,int> bz;
 
@@ -52,7 +53,7 @@ cout << c1->first << endl;
 //auto qz = s_trings.find('a');
 
 
-
+cout << " void main() {  int a = 15; int b = 25; } " << endl;
 
 //std::cout << qz->first << std::endl;
 //std::cout << qz->second << std::endl;
