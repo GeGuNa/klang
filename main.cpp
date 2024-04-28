@@ -8,6 +8,29 @@
    
 using namespace std;
 
+
+
+
+enum TokenType {
+    VAR,
+    OBJECT,
+    IDENTIFIER,
+    NUMBER,
+    STRING,
+    OPERATOR,
+    DELIMITER,
+    WHITESPACE
+};
+
+struct Token {
+    TokenType type;
+    std::string value;
+};
+
+
+
+
+
 int main() {
 
 typedef  unsigned long long int ULONG64;
