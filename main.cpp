@@ -135,7 +135,9 @@ if (strcmp(argv[i], "-c") == 0 || strcmp(argv[i], "--compile") == 0) {
 ifmatch=1;
 
 
-} else {
+} else if (strcmp(argv[i], "-v") == 0 || strcmp(argv[i], "--version") == 0) {
+   cout << "version 0.0001\n";
+}   else {
    //ifmatch=0;
 
 }
