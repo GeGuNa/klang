@@ -117,7 +117,7 @@ if (argc<3) {
 } else {
    
  
-  
+
    
 for (int i = 1; i < argc; ++i) {
 
@@ -126,7 +126,27 @@ if (strcmp(argv[i], "-c") == 0 || strcmp(argv[i], "--compile") == 0) {
 
    ifmatch=1;
 
+string prfl1 = argv[i+1];
+
+
+ ifstream fileq(prfl1);
+ 
+ 
+    if (/*!fileq*/ fileq.fail())
+    {  
+        cout << "File opening failed\n";
+        return 0;
+    } 
+  
+
+
+
+
+
    cout << " oh yeah" << endl;
+   
+   
+   
 
 } else if (strcmp(argv[i], "-h") == 0 || strcmp(argv[i], "--help") == 0) {
 
