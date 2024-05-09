@@ -4,10 +4,12 @@
 #include <fstream>
 #include <cstring>
 
+//#include <print>
 
 //using string = std::string;   
    
 using namespace std;
+
 
 
 
@@ -30,9 +32,36 @@ struct Token {
 
 
 
+void changeFile(string fileName, string data){
+   
+   
+   
+   
+    ofstream myStream;
+    //myStream.open(fileName.c_str(), fstream::in | fstream::out);     
+    myStream.open(fileName);     
+
+    myStream << data;
+
+
+    myStream.close();
+}
+
+
+
+
+
+
+
 
 
 int main(int argc, char**argv) {
+
+
+
+
+
+
 
 typedef  unsigned long long int ULONG64;
 typedef  long long int LONG64;
@@ -106,9 +135,43 @@ fstream fl;
 
 
 if (argc<3) {
+  
+  
+  
+string flnm1qz =  "k.cpp";  
+
+
+string res = ""
+"#include <iostream> \n"
+"#include <string> \n"
+"using namespace std;\n"
+"int main(){\n"
+"cout << \"Hello\" << endl;\n"     
+"return 0;\n"
+"}\n";
+
+
+changeFile("./"+flnm1qz+"", res);
+
+
+string aa_1 = "g++ -o ./prog.o "+flnm1qz+"   && ./prog.o  ";
+
+//const char* cmnd1= "g++ -o ./prog.o flnm1qz && ./prog.o";
+
+
+  
+  
    
    
    cout << "uups" << endl;
+   
+   
+   cout << "result" << endl;
+   system(aa_1.c_str());
+  
+   
+   
+   
    
    exit(0);
    return 0;
@@ -182,6 +245,7 @@ if (ifmatch == 0){
 
 
 
+
 int a = 15;
 
 
@@ -210,7 +274,10 @@ break;
 
 
 
+//char zzz = new char[15];
+//std::print("hehe");
 
+//delete[] zzz;
 
 ///////////////////
 
