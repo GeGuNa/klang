@@ -169,7 +169,27 @@ string aa_1 = "g++ -o ./prog.o "+flnm1qz+"   && ./prog.o  ";
    cout << "result" << endl;
    system(aa_1.c_str());
   
+  
+  
+  
+string a_z1 = "abcdqweqweq";  
+  
+
+cout << " ---------- \n"; 
+
+
+for(auto x : a_z1){
    
+  switch (x) {
+     case 'a':  cout << "1111" << endl; break;
+     case 'b':  cout << "222" << endl;  break;
+     case 'c':  cout << "333" << endl;  break;
+     default: //for default values 
+     cout << "yqp " << endl;
+  } 
+   
+   //cout << x << endl;
+}   
    
    
    
