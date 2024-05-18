@@ -11,6 +11,7 @@
 using namespace std;
 
 
+typedef long long int int64;
 
 
 
@@ -50,6 +51,29 @@ void changeFile(string fileName, string data){
 
 
 
+
+
+
+
+
+
+
+
+
+void ParsingVar(string& a, int64& startingPoint){
+ 
+
+//auto aaz = a.substr() 
+  
+  
+cout << startingPoint << " ___2" << endl;
+  
+  
+cout << "address  " << &startingPoint << endl;
+
+
+
+}
 
 
 
@@ -121,14 +145,6 @@ cout << " void main() {  int a = 15; int b = 25; } " << endl;
 
 
 
-
-
-
-
-
-
-
-
 fstream fl;
 
  int ifmatch=0;
@@ -171,24 +187,73 @@ string aa_1 = "g++ -o ./prog.o "+flnm1qz+"   && ./prog.o  ";
   
   
   
+ 
+string a_z1 = R"(
+
+var s = 15;
+var k = z 15;
+string a = "qqq";
+string c = "qqq";
+f32 dd = 15.3;
+f64 aaa = 331;
+Var zzz = 15;
+)";  
   
-string a_z1 = "abcdqweqweq";  
-  
+    
 
 cout << " ---------- \n"; 
 
 
-for(auto x : a_z1){
+
+
+
+int64 cntqofprs1 = 0;
+
+
+cout << &cntqofprs1 << endl;
+
+for(auto x : a_z1) {
    
   switch (x) {
-     case 'a':  cout << "1111" << endl; break;
-     case 'b':  cout << "222" << endl;  break;
-     case 'c':  cout << "333" << endl;  break;
-     default: //for default values 
-     cout << "yqp " << endl;
+     /*case 'a':  
+     
+     
+     
+     cout << "1111" << endl; 
+     
+     
+     break;
+     */
+     case 'v': case 'V':
+      
+       //ParsingVar(a_z1, cntqofprs1);
+     
+    
+     
+     
+     cout << "111" << endl; 
+      
+       break;
+
+     
+     case 'z':
+         cout << "2222222" << endl;
+     break;
+   
+   
+   
+   //for default values 
+     default: 
+      cout << "333333" << endl;
+ 
+     
+     //cout << "" << endl;
+  
   } 
    
    //cout << x << endl;
+   
+   cntqofprs1++;
 }   
    
    
