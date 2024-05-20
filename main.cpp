@@ -3,6 +3,7 @@
 #include <map>
 #include <fstream>
 #include <cstring>
+#include <cctype>
 
 //#include <print>
 
@@ -56,6 +57,32 @@ void changeFile(string fileName, string data){
 
 
 
+void  rplc1(char* b){
+   
+
+int length = strlen(b);
+
+char str[length];
+
+strncpy(str, b, length-1); 
+str[length-1] = '\0'; 
+
+cout << str << endl; 
+   
+   
+}
+
+
+
+char punct(const char *a, int len) {
+    for (int i = 0; i < len; i++) {
+        if (ispunct(a[i]))
+            { 
+               return i; 
+            }
+    }
+    return -1;
+}
 
 
 
@@ -82,11 +109,17 @@ cout << "address  " << &startingPoint << endl;
 int main(int argc, char**argv) {
 
 
+/*
+const char *bz1 = "abce1 @";
+int z1sizeof1 = strlen(bz1);
+
+int lchpuna = punct(bz1, z1sizeof1);
 
 
+cout << lchpuna << endl;
 
-
-
+return 1;
+*/
 typedef  unsigned long long int ULONG64;
 typedef  long long int LONG64;
 
